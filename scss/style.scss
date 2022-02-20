@@ -1,0 +1,17 @@
+// import files
+// import components
+@use "components/animations";
+@use "components/buttons";
+@use "./components/mixins";
+@use "components/typography";
+
+// import sections
+@use "sections/navbar";
+@use "sections/hero";
+@use "./sections/about";
+@use "./sections/skills";
+@use "./sections/portfolio";
+@use "./sections/contacts";
+
+// import custom
+@use "custom";

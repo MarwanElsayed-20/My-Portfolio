@@ -1,0 +1,190 @@
+// include related files
+@use "../custom" as *;
+@use "./../components/mixins" as *;
+@use "./../components/animations" as *;
+
+/* start portfolio section */
+section.portfolio {
+  @include section;
+  z-index: 1;
+  position: relative;
+
+  .container {
+    max-width: 940px;
+
+    .title {
+      h2 {
+        @include title;
+      }
+      p {
+        text-align: center;
+        color: $text-color;
+        margin-top: 28px;
+      }
+    }
+
+    .projects {
+      margin-top: 46px;
+
+      .project {
+        @include gradient;
+        border-radius: 10px;
+        position: relative;
+        margin: 46px 0;
+        transition: $transition;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 0 5px 2px #d8d8d8;
+        }
+
+        &:nth-child(odd) {
+          right: -33%;
+          position: relative;
+          @include media-breakpoint-down(sm) {
+            right: auto;
+          }
+
+          .mobile-img {
+            right: auto;
+            left: -24%;
+          }
+        }
+
+        a {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+
+        .main-img {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .lap-img {
+            width: 115%;
+          }
+
+          .mobile-img {
+            width: 80%;
+            position: absolute;
+            right: -24%;
+            top: 17%;
+          }
+        }
+      }
+    }
+
+    // .project-content {
+    //   margin-top: 110px;
+    //   height: 80vh;
+
+    // &:nth-child(odd) {
+    //   position: relative;
+    //   right: -10%;
+    // }
+
+    // .project-imgs {
+    //   @include gradient;
+    //   border-radius: 10px;
+    //   position: relative;
+    //   display: flex;
+    //   justify-content: center;
+    //   align-items: center;
+
+    //   &:hover {
+    //     box-shadow: 0 0 5px 2px #d8d8d8;
+    //   }
+
+    //   &:hover .logo-img {
+    //     animation: rotate 0.7s 1 linear;
+    //   }
+
+    //   .main-img {
+    //     width: 100%;
+    //     position: relative;
+
+    //     img:nth-child(1) {
+    //       left: -20px;
+    //       position: relative;
+    //     }
+    //     img:nth-child(2) {
+    //       position: absolute;
+    //       width: 75%;
+    //       right: -83px;
+    //       top: 43px;
+    //     }
+    //   }
+
+    //   // .logo-img {
+    //   //   width: 20%;
+    //   //   top: -60px;
+    //   //   left: 5px;
+    //   //   position: absolute;
+    //   //   transform: rotate(0deg);
+    //   // }
+    // }
+
+    // .wordpress-project-info {
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: start;
+    //   position: relative;
+    //   left: -50px;
+
+    //   h3 {
+    //     font-size: 2.3rem;
+    //     font-weight: bold;
+    //     color: $title-color;
+    //   }
+
+    //   p {
+    //     color: $text-color;
+    //   }
+    // }
+    // }
+    // plain code project
+    // .plain-code-project-content {
+    //   @extend .project-content;
+
+    //   .plain-code-project-imgs {
+    //     @extend .project-imgs;
+    //     order: 2;
+
+    //     .main-img {
+    //       img:nth-child(1) {
+    //         right: -20px;
+    //         left: auto;
+    //       }
+
+    //       img:nth-child(2) {
+    //         left: -83px;
+    //         right: auto;
+    //       }
+    //     }
+
+    //     .logo-img {
+    //       right: 5px;
+    //       left: auto;
+    //     }
+    //   }
+
+    //   // .plain-code-project-info {
+    //   //   @extend .project-info;
+    //   //   right: -50px;
+    //   //   left: auto;
+    //   // }
+
+    //   // .project-info {
+    //   //   h3 {
+    //   //     font-size: 2rem;
+    //   //   }
+    //   // }
+    // }
+  }
+}
+/* end portfolio section */

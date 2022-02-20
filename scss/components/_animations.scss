@@ -1,0 +1,56 @@
+// include related files
+@use "../custom" as *;
+@use "./../components/mixins" as *;
+
+// typewriter effect
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+// wave animation
+@keyframes wave {
+  0%,
+  100% {
+    width: 100%;
+  }
+  50% {
+    width: 105%;
+  }
+}
+
+// infinite skills carousel
+@keyframes scroll {
+  0% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(calc(-250px * 5));
+  }
+  100% {
+    transform: translateX(calc(-250px * 3));
+  }
+}
+
+@keyframes scroll-mobile {
+  0% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(calc(-250px * 9));
+  }
+  100% {
+    transform: translateX(calc(-250px * 3));
+  }
+}
+// project logo
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

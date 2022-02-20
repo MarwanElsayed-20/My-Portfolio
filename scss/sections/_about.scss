@@ -1,0 +1,27 @@
+// include related files
+@use "../custom" as *;
+@use "./../components/mixins" as *;
+
+/* start about section */
+section.about-me {
+  @include section;
+  text-align: center;
+
+  .about-me-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 940px;
+
+    h2 {
+      @include title;
+    }
+
+    p {
+      margin-top: 60px;
+      color: $text-color;
+    }
+  }
+}
+/* end about section */

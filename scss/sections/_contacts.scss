@@ -1,0 +1,79 @@
+// include related files
+@use "../custom" as *;
+@use "./../components/mixins" as *;
+@use "./../components/animations" as *;
+
+/* start contacts */
+section.contacts {
+  height: 110vh;
+  position: relative;
+  z-index: 0;
+  @include gradient;
+  @include media-breakpoint-down(sm) {
+    overflow: hidden;
+  }
+
+  svg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    top: -14%;
+    @include media-breakpoint-down(sm) {
+      top: -23%;
+      width: 256%;
+    }
+    @include media-breakpoint-between(sm, lg) {
+      width: auto;
+      top: auto;
+    }
+  }
+
+  .contact-content {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+    h2 {
+      @include title;
+      color: white;
+      letter-spacing: 10px;
+      margin-top: 20%;
+      margin-bottom: 20px;
+      @include media-breakpoint-down(sm) {
+        margin-top: 80%;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      .social-wrapper {
+        a {
+          width: 50px;
+          border-radius: 50%;
+          height: 50px;
+          background: white;
+          margin: 0 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+
+          i {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+/* end contacts */

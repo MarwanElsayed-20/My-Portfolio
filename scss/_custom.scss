@@ -1,0 +1,27 @@
+// theme variabels
+$main-color: #f37778;
+$alt-color: #f4f0a4;
+$background-color: #e6e6e6;
+$title-color: #454b54;
+$text-color: #9298ab;
+
+$transition: all 0.3s;
+
+// white & grey colors
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$primary: $main-color;
+$secondary: $alt-color;
+
+// import bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

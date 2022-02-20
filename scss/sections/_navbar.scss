@@ -1,0 +1,232 @@
+// include related files
+@use "../custom" as *;
+@use "./../components/mixins" as *;
+
+/* start navbar */
+.header-container {
+  nav {
+    background-color: transparent !important;
+    z-index: 2;
+    transition: $transition;
+    @include media-breakpoint-down(lg) {
+      position: relative !important;
+    }
+
+    .container-fluid {
+      @include media-breakpoint-down(lg) {
+        justify-content: center;
+      }
+    }
+
+    a.navbar-brand {
+      transition: $transition;
+      width: 7%;
+      @include media-breakpoint-down(lg) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 20%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+
+    .navigation-content {
+      @include media-breakpoint-down(lg) {
+        display: none;
+      }
+    }
+
+    div.button {
+      background: transparent;
+      width: 5rem;
+      height: 70px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      cursor: pointer;
+      border-radius: 10px;
+      z-index: 1;
+
+      &.active .line1:nth-child(1) {
+        transform: translateY(13px) rotate(45deg);
+      }
+      &.active .line2:nth-child(2) {
+        transform: translateY(-13px) rotate(-45deg);
+      }
+
+      span.line1 {
+        position: relative;
+        height: 0.3rem;
+        width: 2rem;
+        background: $white;
+        border-radius: 10px;
+        transition: $transition;
+      }
+
+      span.line2 {
+        @extend .line1;
+      }
+    }
+
+    .navigation {
+      position: absolute;
+      width: 500px;
+      height: 70px;
+      background-color: $white;
+      display: flex;
+      padding-left: 30px;
+      align-items: center;
+      border-radius: 10px;
+      right: -50%;
+      top: 23%;
+      outline: 12px solid $title-color;
+      transition: $transition;
+
+      &.after {
+        transform: rotate(270deg);
+        transform-origin: 86% 47%;
+        background: $alt-color;
+        outline: 12px solid $white;
+
+        ul {
+          li {
+            a {
+              .icon {
+                transform: rotate(90deg);
+              }
+            }
+          }
+        }
+
+        .indicator {
+          border: 6px solid $white;
+
+          &::before {
+            box-shadow: 2px -11px 0 0 $white;
+          }
+          &::after {
+            box-shadow: -1px -11px 0 0 $white;
+          }
+        }
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        width: 350px;
+
+        li {
+          position: relative;
+          z-index: 1;
+          width: 70px;
+          height: 70px;
+
+          &.visit a .icon {
+            transform: translateY(-35px);
+          }
+
+          &.visit a .text {
+            transform: translateY(14px);
+            opacity: 1;
+          }
+
+          &:nth-child(1).visit ~ .indicator {
+            transform: translateX(calc(70px * 0));
+          }
+
+          &:nth-child(2).visit ~ .indicator {
+            transform: translateX(calc(70px * 1));
+          }
+
+          &:nth-child(3).visit ~ .indicator {
+            transform: translateX(calc(70px * 2));
+          }
+
+          &:nth-child(4).visit ~ .indicator {
+            transform: translateX(calc(70px * 3));
+          }
+          &:nth-child(5).visit ~ .indicator {
+            transform: translateX(calc(70px * 4));
+          }
+
+          a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+            height: 100%;
+
+            .icon {
+              position: relative;
+              display: block;
+              font-size: 1.5rem;
+              text-align: center;
+              color: $title-color;
+              transition: $transition;
+            }
+
+            .text {
+              position: absolute;
+              color: $title-color;
+              font-size: 0.9rem;
+              font-weight: bold;
+              transition: $transition;
+              letter-spacing: 0.05em;
+              transform: translateY(25px);
+              opacity: 0;
+              text-transform: capitalize;
+            }
+          }
+        }
+
+        .indicator {
+          position: absolute;
+          top: -50%;
+          width: 70px;
+          height: 70px;
+          @include gradient;
+          border-radius: 50%;
+          border: 6px solid $title-color;
+          transition: $transition;
+
+          &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: -22px;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border-top-right-radius: 20px;
+            box-shadow: 2px -11px 0 0 $title-color;
+          }
+
+          &::after {
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: -22px;
+            width: 20px;
+            height: 20px;
+            background-color: transparent;
+            border-top-left-radius: 20px;
+            box-shadow: -1px -11px 0 0 $title-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* end navbar */

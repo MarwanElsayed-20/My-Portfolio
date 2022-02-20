@@ -1,0 +1,37 @@
+// include related files
+@use "./../custom" as *;
+
+// gradient mixin
+@mixin gradient {
+  background: linear-gradient(to right, $secondary, $primary);
+  @include media-breakpoint-down(lg) {
+    background: linear-gradient(to right, $primary, $secondary);
+  }
+}
+
+// sections style
+@mixin section {
+  padding: 100px 0 160px 0;
+  text-transform: capitalize;
+}
+
+// titles style
+@mixin title {
+  padding-bottom: 20px;
+  position: relative;
+  font-size: 50px;
+  letter-spacing: 1.88px;
+  color: $title-color;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 5rem;
+    background: $main-color;
+  }
+}

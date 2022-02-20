@@ -1,0 +1,135 @@
+// include related files
+@use "../custom" as *;
+
+/* start hero */
+.header-container {
+  height: 100vh;
+  background-image: url("../../imgs/header-background.png");
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+
+  @include media-breakpoint-up(lg) {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 15%;
+      background: white;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  header {
+    position: relative;
+    height: 100vh;
+    z-index: 0;
+    text-transform: capitalize;
+    bottom: -120px;
+
+    @include media-breakpoint-down(sm) {
+      bottom: 0;
+    }
+    @include media-breakpoint-between(sm, lg) {
+      margin-top: 25%;
+      bottom: 0;
+    }
+
+    .container {
+      position: relative;
+      top: -50px;
+    }
+
+    .hero-info {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      justify-content: center;
+      @include media-breakpoint-down(sm) {
+        margin-top: 15%;
+      }
+
+      span.hello {
+        font-size: 2rem;
+        color: white;
+        display: block;
+        @include media-breakpoint-down(sm) {
+          font-size: 1rem;
+        }
+      }
+
+      .title {
+        font-weight: bold;
+        color: white;
+        display: block;
+        font-size: 5rem;
+        @include media-breakpoint-down(sm) {
+          font-size: 38px;
+        }
+
+        span.blinker {
+          animation: blinker 1s linear infinite;
+          color: $main-color;
+        }
+      }
+
+      p {
+        font-size: 2rem;
+        color: white;
+        font-weight: 100;
+        letter-spacing: 14px;
+        @include media-breakpoint-down(sm) {
+          font-size: 12px;
+          letter-spacing: 8px;
+        }
+      }
+    }
+
+    .hero-img {
+      text-align: end;
+      position: relative;
+      @include media-breakpoint-between(sm, lg) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      img {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        transition: $transition;
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+        }
+        @include media-breakpoint-between(sm, lg) {
+          width: 150%;
+        }
+      }
+    }
+  }
+
+  svg.waves {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: fit-content;
+    z-index: -2;
+    transition: $transition;
+    animation: wave 8s ease-in-out infinite alternate-reverse both;
+  }
+
+  svg.wave {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    height: fit-content;
+    z-index: 1;
+    transition: $transition;
+    animation: wave 8s ease-in-out infinite alternate-reverse both;
+  }
+}
+
+/* end hero */
