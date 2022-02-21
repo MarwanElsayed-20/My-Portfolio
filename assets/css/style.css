@@ -11485,7 +11485,7 @@ body {
 }
 .header-container svg.waves {
   position: absolute;
-  width: 100%;
+  max-width: 100%;
   bottom: 0;
   height: fit-content;
   z-index: -2;
@@ -11493,7 +11493,7 @@ body {
   animation: wave 8s ease-in-out infinite alternate-reverse both;
 }
 .header-container svg.wave {
-  width: 100%;
+  max-width: 100%;
   position: absolute;
   bottom: 0px;
   height: fit-content;
@@ -11610,6 +11610,7 @@ section.portfolio {
   text-transform: capitalize;
   z-index: 1;
   position: relative;
+  overflow: hidden;
 }
 section.portfolio .container {
   max-width: 940px;
@@ -11704,7 +11705,7 @@ section.contacts {
     background: linear-gradient(to right, #f37778, #f4f0a4);
   }
 }
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   section.contacts {
     overflow: hidden;
   }

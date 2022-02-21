@@ -9,7 +9,7 @@ section.contacts {
   position: relative;
   z-index: 0;
   @include gradient;
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(lg) {
     overflow: hidden;
   }
 

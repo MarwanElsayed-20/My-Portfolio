@@ -8,6 +8,7 @@ section.portfolio {
   @include section;
   z-index: 1;
   position: relative;
+  overflow: hidden;
 
   .container {
     max-width: 940px;

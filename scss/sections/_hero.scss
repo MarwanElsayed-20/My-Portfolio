@@ -113,7 +113,7 @@
 
   svg.waves {
     position: absolute;
-    width: 100%;
+    max-width: 100%;
     bottom: 0;
     height: fit-content;
     z-index: -2;
@@ -122,7 +122,7 @@
   }
 
   svg.wave {
-    width: 100%;
+    max-width: 100%;
     position: absolute;
     bottom: 0px;
     height: fit-content;
