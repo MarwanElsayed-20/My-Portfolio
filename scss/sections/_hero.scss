@@ -33,7 +33,7 @@
       bottom: 0;
     }
     @include media-breakpoint-between(sm, lg) {
-      margin-top: 25%;
+      margin-top: 5%;
       bottom: 0;
     }
 
@@ -68,6 +68,9 @@
         @include media-breakpoint-down(sm) {
           font-size: 38px;
         }
+        @include media-breakpoint-between(sm, lg) {
+          font-size: 3rem;
+        }
 
         span.blinker {
           animation: blinker 1s linear infinite;
@@ -83,6 +86,10 @@
         @include media-breakpoint-down(sm) {
           font-size: 12px;
           letter-spacing: 8px;
+        }
+        @include media-breakpoint-between(sm, lg) {
+          font-size: 1rem;
+          letter-spacing: 10px;
         }
       }
     }

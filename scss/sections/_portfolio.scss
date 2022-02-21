@@ -34,6 +34,9 @@ section.portfolio {
         margin: 46px 0;
         transition: $transition;
         cursor: pointer;
+        @include media-breakpoint-between(sm, lg) {
+          margin: 46px auto;
+        }
 
         &:hover {
           box-shadow: 0 0 5px 2px #d8d8d8;
@@ -42,7 +45,7 @@ section.portfolio {
         &:nth-child(odd) {
           right: -33%;
           position: relative;
-          @include media-breakpoint-down(sm) {
+          @include media-breakpoint-down(lg) {
             right: auto;
           }
 

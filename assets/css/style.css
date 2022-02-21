@@ -11400,7 +11400,7 @@ body {
 }
 @media (min-width: 576px) and (max-width: 991.98px) {
   .header-container header {
-    margin-top: 25%;
+    margin-top: 5%;
     bottom: 0;
   }
 }
@@ -11440,6 +11440,11 @@ body {
     font-size: 38px;
   }
 }
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .header-container header .hero-info .title {
+    font-size: 3rem;
+  }
+}
 .header-container header .hero-info .title span.blinker {
   animation: blinker 1s linear infinite;
   color: #f37778;
@@ -11454,6 +11459,12 @@ body {
   .header-container header .hero-info p {
     font-size: 12px;
     letter-spacing: 8px;
+  }
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .header-container header .hero-info p {
+    font-size: 1rem;
+    letter-spacing: 10px;
   }
 }
 .header-container header .hero-img {
@@ -11654,6 +11665,11 @@ section.portfolio .container .projects .project {
     background: linear-gradient(to right, #f37778, #f4f0a4);
   }
 }
+@media (min-width: 576px) and (max-width: 991.98px) {
+  section.portfolio .container .projects .project {
+    margin: 46px auto;
+  }
+}
 section.portfolio .container .projects .project:hover {
   box-shadow: 0 0 5px 2px #d8d8d8;
 }
@@ -11661,7 +11677,7 @@ section.portfolio .container .projects .project:nth-child(odd) {
   right: -33%;
   position: relative;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   section.portfolio .container .projects .project:nth-child(odd) {
     right: auto;
   }
