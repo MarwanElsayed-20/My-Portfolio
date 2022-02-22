@@ -126,6 +126,14 @@
     z-index: -2;
     transition: $transition;
     animation: wave 8s ease-in-out infinite alternate-reverse both;
+    @include media-breakpoint-down(sm) {
+      height: 100vh;
+      bottom: -40%;
+    }
+    @include media-breakpoint-between(sm, lg) {
+      height: 100vh;
+      bottom: -30%;
+    }
   }
 
   svg.wave {

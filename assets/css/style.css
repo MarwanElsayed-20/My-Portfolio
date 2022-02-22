@@ -11503,6 +11503,18 @@ body {
   transition: all 0.3s;
   animation: wave 8s ease-in-out infinite alternate-reverse both;
 }
+@media (max-width: 575.98px) {
+  .header-container svg.waves {
+    height: 100vh;
+    bottom: -40%;
+  }
+}
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .header-container svg.waves {
+    height: 100vh;
+    bottom: -30%;
+  }
+}
 .header-container svg.wave {
   max-width: 100%;
   position: absolute;
