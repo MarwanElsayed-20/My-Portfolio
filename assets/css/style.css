@@ -11524,6 +11524,11 @@ body {
   transition: all 0.3s;
   animation: wave 8s ease-in-out infinite alternate-reverse both;
 }
+@media (max-width: 670px) {
+  .header-container svg.wave {
+    display: none;
+  }
+}
 
 /* end hero */
 /* start about section */

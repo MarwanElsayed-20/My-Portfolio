@@ -144,6 +144,9 @@
     z-index: 1;
     transition: $transition;
     animation: wave 8s ease-in-out infinite alternate-reverse both;
+    @media (max-width: 670px) {
+      display: none;
+    }
   }
 }
 
